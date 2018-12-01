@@ -1,1 +1,1 @@
-###An application to retrieve weather metrics of given city
+### An application to retrieve weather metrics of given city
