@@ -18,6 +18,8 @@ public class WeatherUtil {
 	
 	//private constructor of utility class
 	private WeatherUtil() {}
+	
+	public static boolean fakeFeature;
 
 	public static ApiInfo getApiInfo() {
 		return new ApiInfo(WEATHER_FORECAST_APP,

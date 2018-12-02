@@ -4,18 +4,18 @@ import java.util.List;
 
 public class WeatherForecast {
 	
-	private String cod;
+	//private String cod;
 	private float message;
 	private int cnt;
 	List<Weather> list;
 	//private String city;
 	
-	public String getCod() {
+	/*public String getCod() {
 		return cod;
 	}
 	public void setCod(String cod) {
 		this.cod = cod;
-	}
+	}*/
 	public float getMessage() {
 		return message;
 	}

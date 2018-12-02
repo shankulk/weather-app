@@ -10,5 +10,9 @@ public interface WeatherConstants {
 	public static final String VERSION = "V1";
 	public static final String API_DESCRIPTION = "API to retrieve weather metrics of a specific city";
 	public static final String WEATHER_FORECAST_APP = "Weather Forecast App";
+	public static final String DATE_FORMAT_YYYY_MM_DD = "yyyy-MM-dd";
+	public static final int DURATION_4_DAYS = 4;
+	public static final String UTC_TIME_ZONE = "UTC";
+
 
 }

@@ -13,7 +13,14 @@ public class Weather {
 	@JsonProperty("dt")
 	private long dateTime;
 	private MainData main;
+	
+	public Weather(long dateTime, MainData main) {
+		this.dateTime = dateTime;
+		this.main = main;
+	}
 
+	public Weather() {}
+	
 	public long getDateTime() {
 		return dateTime;
 	}

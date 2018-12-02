@@ -4,6 +4,13 @@ public class MainData {
 
 	private double temp;
 	private double pressure;
+
+	public MainData() {}
+
+	public MainData(double temp, double pressure) {
+		this.temp = temp;
+		this.pressure = pressure;
+	}
 	
 	public double getTemp() {
 		return temp;

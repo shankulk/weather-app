@@ -13,6 +13,13 @@ import org.springframework.web.client.HttpClientErrorException;
 @ControllerAdvice(basePackages = {"com.shankulk.weatherapp.controller"})
 public class GlobalExceptionHandler {
 
+	@ExceptionHandler(IllegalArgumentException.class)
+	@ResponseStatus(HttpStatus.BAD_REQUEST)
+	public @ResponseBody ErrorInfo handleException(IllegalArgumentException e) {
+		if(e.getMessage().equals("Missing City"))
+			return new ErrorInfo("Please consider sending valid city query parameter in the request.");
+		return new ErrorInfo(e.getMessage());
+	}
 	
 	@ExceptionHandler(URISyntaxException.class)
 	@ResponseStatus(HttpStatus.BAD_REQUEST)
@@ -23,7 +30,7 @@ public class GlobalExceptionHandler {
 	@ExceptionHandler(UnknownHostException.class)
 	@ResponseStatus(HttpStatus.REQUEST_TIMEOUT)
 	public @ResponseBody ErrorInfo hendleException(UnknownHostException e) {
-		return new ErrorInfo(e.getMessage() + ", Check your internet connectivity.");
+		return new ErrorInfo(e.getMessage() + ", Please check your internet connectivity.");
 	}
 	
 	@ExceptionHandler(HttpClientErrorException.class)

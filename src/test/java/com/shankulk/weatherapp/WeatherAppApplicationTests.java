@@ -33,8 +33,7 @@ public class WeatherAppApplicationTests {
 	//@Test
 	public void testRemoteServiceResponds() throws Exception {
 		mockMvc.perform(MockMvcRequestBuilders
-				.get("/data")
-				//.contextPath("/weather")
+				.get("/data&city=London")
 				.accept(MediaType.APPLICATION_JSON)
 				)
 			.andExpect(MockMvcResultMatchers.status().isOk());
